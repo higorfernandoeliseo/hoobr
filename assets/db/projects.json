@@ -1,0 +1,41 @@
+[
+    {
+        "name": "feedress",
+        "description": "Leitor leve de Feeds RSS feito somente com HTML, CSS e JavaScript com persistência localmente sem a dependência de algoritmos.",
+        "desenvolvedor": "higorfernandoeliseo",
+        "url": "https://github.com/higorfernandoeliseo/feedress",
+        "languages": ["HTML", "CSS", "JavaScript"],
+        "category": "Leitor RSS"
+    },
+    {
+        "name": "Brasil API",
+        "description": "Vamos transformar o Brasil em uma API?",
+        "desenvolvedor": "BrasilAPI",
+        "url": "https://github.com/BrasilAPI/BrasilAPI",
+        "languages": ["JavaScript", "Shell", "SCSS"],
+        "category": "API"
+    },
+    {
+        "name": "KiddieOS",
+        "description": "é um sistema operacional open-source básico em desenvolvimento pelo curso gratuito D.S.O.S [Desenvolvendo Sistemas Operacionais Simples].",
+        "desenvolvedor": "FrancisBFTC",
+        "url": "https://github.com/FrancisBFTC/KiddieOS_Development",
+        "languages": ["Assembly", "C", "QuickBASIC"],
+        "category": "Sistema Operacional"
+    },
+    {
+        "name": "pancake",
+        "description": "🧰 🛠️ Pancake project - toolkit for PHP projects",
+        "desenvolvedor": "guibranco",
+        "url": "https://github.com/guibranco/pancake",
+        "languages": ["PHP", "Shell"],
+        "category": "Toolkit"
+    },{
+         "name": "elixir",
+        "description": "O Elixir é uma linguagem dinâmica e funcional para a construção de aplicações escaláveis e sustentáveis.",
+        "desenvolvedor": "mvfsillva",
+        "url": "https://github.com/elixir-lang/elixir",
+        "languages": ["JavaScript"],
+        "category": "Programação"
+    }
+]

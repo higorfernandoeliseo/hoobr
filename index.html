@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoobr :: Modo Open-Source Brazuca!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/menu.min.css">
+    <link rel="stylesheet" href="assets/css/lineicons-free-solid.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="h-100">
+                <ul>
+                    <li class="sidebar-header">
+                        <button id="btnContribute"><i class="lni lnis-plus"></i> Adicionar meu projeto</button>
+                    </li>
+                </ul>
+                <div id="search-box">
+                    <input type="text" name="termos" id="searchEngine" placeholder="Pesquisar ..." spellcheck="false">
+                </div>
+                <ul>
+                    <li class="sidebar-header">
+                        Categorias
+                    </li>
+                </ul>
+                <hr class="hr-box">
+                <ul class="sidebar-nav"></ul>
+                <hr class="hr-box">
+            </div>
+        </aside>
+
+        <div class="main">
+            <nav class="dashboard-navbar">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lnis-menu-hamburger-1"></i>
+                </button>
+                <div class="logo-navbar">
+                    <a href="#">
+                        <img src="assets/images/logo.png" alt="Logo do Hoobr" width="108px">
+                    </a>
+                </div>
+            </nav>
+            <main class="content">
+                <div id="defaultDisplay">
+                    <div class="bx-header-lastprojects">
+                        <h2 id="titlePage" class="subtitle">Adicionados recentemente</h2>
+                        <p id="info-message">Últimos projetos lançados recentemente em ordem descrecente</p>
+                    </div>
+                </div>
+                <div id="filterDisplay">
+                    <div class="bx-header-listsprojects">
+                        <h2 id="titleListProjs" class="subtitle"></h2>
+                        <p class="info-categories"></p>
+                    </div>
+                </div>
+                <div class="projetos-grid"></div>
+                <button id="loadMore">Carregar mais</button>
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
