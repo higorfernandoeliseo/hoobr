@@ -1,42 +1,42 @@
-# projeto Hoobr
+# project Hoobr
 
-## "Hub de Projetos Open-Source Brasil"
+## "Open-Source Projects Hub Brazil"
 
-O projeto é uma forma de centralizar bibliotecas, ferramentas e iniciativas de código aberto criadas por desenvolvedores do Brasil, facilitando a descoberta, o suporte e a colaboração em projetos nacionais.
+The project is a way to centralize libraries, tools, and open-source initiatives created by developers in Brazil, facilitating the discovery, support, and collaboration on national projects.
 
-É exibido no card de cada projeto o nome do projeto, autor, descrição, linguagens usadas, categoria, e o estado de desenvolvimento.
+Each project card displays the project name, author, description, languages ​​used, category, and development status.
 
-Ela funciona como um hub dai o nome Hoobr ele uitiliza o backend de banco de dados com um arquivo JSON onde os projetos que serão adicionados pela comunidade por meio desse arquivo.
+It functions as a hub, hence the name Hoobr. It uses a database backend with a JSON file where projects will be added by the community.
 
-Para subir um projeto na plataforma é feito por meio fork no projeto e clonando ele localmente para editar o arquivo JSON e subindo novamente para o Github e abrindo um pull request onde é analisado e no fim é mesclado o banco de dados com alteração adicionando o projeto na pagina inicial da plataforma.
+To upload a project to the platform, it's done by forking the project and cloning it locally to edit the JSON file, then uploading it back to GitHub and opening a pull request where it's analyzed. Finally, the database is merged with the changes, adding the project to the platform's homepage.
 
-Ele possui um sistema de busca bem simples para pesquisar tanto nome do projeto como na descrição.
+It has a very simple search system for searching both project name and description.
 
-## Funcionalidades
+## Features
 
-- Exibição dos projetos Adicionados recentemente na home.
-- Busca para nome de projetos e descrição.
-- Exibição das Llinguagens usadas no projeto.
-- Categorias na lateral dos projetos.
-- Exibição se o projeto esta abandonado ou não.
+- Display of recently added projects on the homepage.
+- Search for project names and descriptions.
+- Display of languages ​​used in the project.
+- Categories on the side of the projects.
+- Display of whether the project is abandoned or not.
 
-## Tecnologias usadas:
+## Technologies used:
 ![HTML5 Logo](https://img.shields.io/badge/HTML-f06529?logo=html5&logoColor=white&labelColor=f06529)
 ![CSS](https://img.shields.io/badge/CSS-1293D8?logo=css&logoColor=fff)
 ![JavaScript Logo](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)
 
-## Definir estado de desenvolvimento
+## Define development stage
 
-Para definir o estado de desenvolvimento no arquivo `projects.json` na pasta `assets/db` você pode definir uma entrada no objeto JSON status abaixo de categoria:
+To set the development status in the `projects.json` file in the `assets/db` folder, you can define an entry in the JSON object status below category:
 
-0 = em desenvolvimento
-1 = abandonado
+0 = in development
+1 = abandoned
 
 
 ## Test-drive
 
-Para testar você pode testar no browser pelo endereço: `https://higorfernandoeliseo.github.io/hoobr/`
+To test, you can use the following address in your browser: `https://higorfernandoeliseo.github.io/hoobr/`
 
-## Reportar erro:
+## Report errors:
 
-Se você quiser relatar um problema ou sugerir uma nova funcionalidade, fique à vontade para criar uma issue neste repositório.
+If you want to report a problem or suggest a new feature, feel free to create an issue in this repository.
