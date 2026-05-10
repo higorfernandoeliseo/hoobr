@@ -50,7 +50,7 @@ example:
 
 ## Test-drive
 
-To test, you can use the following address in your browser: `https://higorfernandoeliseo.github.io/hoobr/`
+To test, you can use the following address in your browser: [access the project](https://higorfernandoeliseo.github.io/hoobr/)
 
 ## Report errors:
 
