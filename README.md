@@ -32,6 +32,21 @@ To set the development status in the `projects.json` file in the `assets/db` fol
 0 = in development
 1 = abandoned
 
+example: 
+```
+[
+    {
+        "name": "feedress",
+        "description": "Leitor leve de Feeds RSS feito somente com HTML, CSS e JavaScript com persistência localmente sem a dependência de algoritmos.",
+        "desenvolvedor": "higorfernandoeliseo",
+        "url": "https://github.com/higorfernandoeliseo/feedress",
+        "languages": ["HTML", "CSS", "JavaScript"],
+        "category": "Leitor RSS",
+        "status": 0
+    }
+]
+```
+
 
 ## Test-drive
 
