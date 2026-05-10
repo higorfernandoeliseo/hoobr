@@ -37,8 +37,8 @@ button#btnContribute {
     width: 100%;
     padding: 0.625rem 0.625rem;
     margin-bottom: 5px;
-    background-color: #f8f8f8;
-    border: 2px solid #e7e7e7;
+    background-color: #f6f6f6;
+    border: 1px solid #e7e7e7;
     cursor: pointer;
     color: #616161;
     border-radius: 6px;
@@ -51,8 +51,9 @@ button#btnContribute i {
 }
 
 button#btnContribute:hover {
-    color: #2c75ff;
-    border-color: #2c75ff;
+    color: #fff;
+    background-color: #6043ef;
+    border-color: #401eeb;
 }
 
 .sidebar-header {

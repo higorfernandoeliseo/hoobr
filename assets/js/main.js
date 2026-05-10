@@ -13,7 +13,11 @@ const modalAddProject = document.querySelector('#modalAddProjeto');
 const BtncloseModal = document.querySelector('#closemodalAddProject');
 const divOverlaymod = document.querySelector('#overlay');
 const divfooter = document.querySelector('#footer');
-const datenow = new Date
+const datenow = new Date();
+
+const openSobreNos = document.querySelector('#sobrenos');
+const modalSobreNos = document.querySelector('#modalSobreNos');
+const BtncloseModalSobreNos = document.querySelector('#closemodalSobreNos');
 
 const hamburguer = document.querySelector('.toggle-btn');
 hamburguer.addEventListener('click', () => {
@@ -48,7 +52,13 @@ const createGrid = (list) => {
         card.classList.add('card-project');
 
         const titulo = document.createElement('h2');
-        titulo.textContent = list.name;
+        
+        const titleLink = document.createElement('a');
+        titleLink.textContent = list.name;
+        titleLink.onclick = () => {
+            window.open(`${list.url}`, '_blank');
+        }
+
 
         const developers = document.createElement('p');
         developers.classList.add('author')
@@ -72,10 +82,23 @@ const createGrid = (list) => {
             window.open(`${list.url}`, '_blank');
         }
 
+        const statusDev = document.createElement('p');
+
+
         const categoria = document.createElement('p');
         categoria.classList.add('cat')
         categoria.innerHTML = `Categoria: <span>${list.category}</span>`;
 
+        if(list.status === 0) {
+            statusDev.textContent = 'Status: Em Desenvolvimento';
+        }else{
+            statusDev.style.color = 'red'
+            statusDev.textContent = 'Status: Abandonado';
+        }
+
+        
+
+        titulo.appendChild(titleLink)
         card.appendChild(titulo)
         card.appendChild(developers);
         card.appendChild(descricao)
@@ -83,6 +106,7 @@ const createGrid = (list) => {
         card.appendChild(linguagens)
         card.appendChild(btnCTARepositorio)
         card.appendChild(categoria)
+        card.appendChild(statusDev)
         projetosGridDiv.appendChild(card);
 
 
@@ -117,8 +141,7 @@ const carregarMais = () => {
 
 }
 
-
-const viewFiltred = (lists, filtro, typefilter) => {
+const SearchResults = (lists, query) => { 
 
     projetosGridDiv.innerHTML = '';
 
@@ -128,19 +151,40 @@ const viewFiltred = (lists, filtro, typefilter) => {
     ArrayProjects = [];
     itensExibidos = 0;
 
-    const findCategory = lists.filter(list => list.category === filtro || list.name.toLowerCase() === filtro);
-    
-    if(typefilter === 'search_results') {
-        pInfoCategories.textContent = (findCategory.length > 0 ) ? `${findCategory.length} resultados encontrados para ${filtro}.`: `${findCategory.length} resultado encontrado.`;
+    const results = lists.filter(list => list.name.toLowerCase().includes(query) || list.description.toLowerCase().includes(query))
+
+    if(results.length > 0) {
+        
+        pInfoCategories.textContent = `${results.length} resultado encontrado.`;
+
+        ArrayProjects = results;
+        carregarMais();
+
     }else{
-        pInfoCategories.textContent = (findCategory.length > 0 ) ? `Essa categoria possui ${findCategory.length} projeto.`: `Essa categoria possui ${findCategory.length} projetos.`;
+        pInfoCategories.textContent = `0 resultado encontrado.`;
     }
+
+}
+
+
+const viewFiltred = (lists, filtro) => {
+
+    projetosGridDiv.innerHTML = '';
+
+    divDefault.style.display = 'none';
+    divListProjects.style.display = 'block';
+
+    ArrayProjects = [];
+    itensExibidos = 0;
+
+    const findCategory = lists.filter(list => list.category === filtro);
+    
+    pInfoCategories.textContent = (findCategory.length > 0 ) ? `Essa categoria possui ${findCategory.length} projeto.`: `Essa categoria possui ${findCategory.length} projetos.`;
 
     ArrayProjects = findCategory;
     carregarMais();
 
 }
-
 
 
 
@@ -220,7 +264,7 @@ const buscaProjetos = (termos) => {
         return;
     }
 
-    viewFiltred(data, termos, 'search_results');
+    SearchResults(data, termos);
 
 }
 
@@ -233,6 +277,14 @@ if(window.innerWidth <= 768) {
 generateMenu(data)
 listGrids(data)
 btnLoadMore.addEventListener('click', carregarMais);
+
+openSobreNos.onclick = () => {
+    openModal(modalSobreNos);
+}
+
+BtncloseModalSobreNos.onclick = () => {
+    closeModal(modalSobreNos);
+}
 
 btnAddProject.onclick = () => {
     openModal(modalAddProject)

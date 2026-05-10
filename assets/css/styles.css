@@ -80,12 +80,31 @@ div#filterDisplay {
 }
 
 div#defaultDisplay h2.subtitle {
-    color: #E63E00;
+    color: #6043ef;
 }
 
 div#defaultDisplay div.bx-header-lastprojects {
     margin-top: 15px;
     padding: 5px 20px;
+}
+
+div#defaultDisplay div.bx-header-lastprojects div#aboutproject {
+    margin: 10px 0px 30px 0px;
+    padding: 15px;
+    background-color: #e7e3fb;
+    border: 1px solid #e3d9fa;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+div#defaultDisplay div.bx-header-lastprojects div#aboutproject a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+div#defaultDisplay div.bx-header-lastprojects div#aboutproject p {
+    color: #3c3948;
 }
 
 div#defaultDisplay div.bx-header-lastprojects p#info-message {
@@ -95,7 +114,7 @@ div#defaultDisplay div.bx-header-lastprojects p#info-message {
 }
 
 div#filterDisplay h2.subtitle {
-    color: #E63E00;
+    color: #6043ef;
 }
 
 div#filterDisplay div.bx-header-listsprojects {
@@ -178,11 +197,18 @@ article.card-project button#openGithub {
     border: none;
     cursor: pointer;
     border-radius: 8px;
+    transition: all 0.13s;
+}
+
+article.card-project button#openGithub:hover {
+    background-color: #6043ef;
+    border-color: #401eeb;
 }
 
 article.card-project p.cat {
     margin-top: 20px;
     font-weight: normal;
+    margin-bottom: 18px;
 }
 
 article.card-project p.cat span {
@@ -224,7 +250,7 @@ div#modalAddProjeto div#title-header {
 }
 
 div#modalAddProjeto div#title-header h2 {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 19px;
 }
 
@@ -257,11 +283,79 @@ div#modalAddProjeto div#body-modal span.message strong {
 p.aviso {
     padding: 10px;
     font-size: 14px;
-    background-color: #fff7ea;
-    border: 1px solid #f8bf19;
-    color: #000;
+    background-color: #e7e3fb;
+    border: 1px solid #cebfef;
+    color: #3c3948;
     border-radius: 8px;
     font-weight: bold;
+}
+
+
+div#modalSobreNos {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    z-index: 20;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+}
+
+div#modalSobreNos div#title-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+div#modalSobreNos div#title-header h2 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+div#modalSobreNos div#title-header button {
+    border: none;
+    color: #cecece;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    background: transparent;
+}
+
+div#modalSobreNos div#title-header button:hover {
+    color: #000;
+}
+
+div#modalSobreNos div#body-modal span.message h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+div#modalSobreNos div#body-modal span.message p {
+    flex-direction: column;
+    font-size: 14px;
+    color: #5c5b5b;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+div#modalSobreNos div#body-modal span.message p a {
+    color: #6043ef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div#modalSobreNos div#body-modal span.message p a:hover {
+    text-decoration: underline;
+}
+
+div#modalSobreNos div#body-modal span.message blockquote {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 div#overlay {
@@ -288,6 +382,17 @@ footer {
 footer p {
     font-size: 14px;
     color: #5c5b5b;
+    margin-left: 20px;
+}
+
+footer a {
+    color: #616161;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #000;
 }
 
 footer p a {

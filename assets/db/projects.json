@@ -5,7 +5,8 @@
         "desenvolvedor": "higorfernandoeliseo",
         "url": "https://github.com/higorfernandoeliseo/feedress",
         "languages": ["HTML", "CSS", "JavaScript"],
-        "category": "Leitor RSS"
+        "category": "Leitor RSS",
+        "status": 0
     },
     {
         "name": "Brasil API",
@@ -13,7 +14,8 @@
         "desenvolvedor": "BrasilAPI",
         "url": "https://github.com/BrasilAPI/BrasilAPI",
         "languages": ["JavaScript", "Shell", "SCSS"],
-        "category": "API"
+        "category": "API",
+        "status": 0
     },
     {
         "name": "KiddieOS",
@@ -21,7 +23,8 @@
         "desenvolvedor": "FrancisBFTC",
         "url": "https://github.com/FrancisBFTC/KiddieOS_Development",
         "languages": ["Assembly", "C", "QuickBASIC"],
-        "category": "Sistema Operacional"
+        "category": "Sistema Operacional",
+        "status": 0
     },
     {
         "name": "pancake",
@@ -29,13 +32,15 @@
         "desenvolvedor": "guibranco",
         "url": "https://github.com/guibranco/pancake",
         "languages": ["PHP", "Shell"],
-        "category": "Toolkit"
+        "category": "Toolkit",
+        "status": 0
     },{
          "name": "elixir",
         "description": "O Elixir é uma linguagem dinâmica e funcional para a construção de aplicações escaláveis e sustentáveis.",
         "desenvolvedor": "mvfsillva",
         "url": "https://github.com/elixir-lang/elixir",
         "languages": ["JavaScript"],
-        "category": "Programação"
+        "category": "Programação",
+        "status": 0
     }
 ]
