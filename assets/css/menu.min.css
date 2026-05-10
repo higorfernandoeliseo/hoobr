@@ -87,3 +87,7 @@ hr.hr-box {
     border-bottom: 1px solid #f6f6f6;
     margin: 10px 0;
 }
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}

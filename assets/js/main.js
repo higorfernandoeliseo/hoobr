@@ -6,6 +6,19 @@ const divListProjects = document.querySelector('#filterDisplay');
 const btnLoadMore = document.querySelector('#loadMore');
 const h2titleListProjs = document.querySelector('#titleListProjs');
 const pInfoCategories = document.querySelector('.info-categories');
+const inputsearchEngine = document.querySelector('#searchEngine');
+const sidebarDiv = document.querySelector('#sidebar');
+const btnAddProject = document.querySelector('#btnContribute')
+const modalAddProject = document.querySelector('#modalAddProjeto');
+const BtncloseModal = document.querySelector('#closemodalAddProject');
+const divOverlaymod = document.querySelector('#overlay');
+const divfooter = document.querySelector('#footer');
+const datenow = new Date
+
+const hamburguer = document.querySelector('.toggle-btn');
+hamburguer.addEventListener('click', () => {
+    sidebarDiv.classList.toggle('collapsed')
+})
 
 divDefault.style.display = 'block';
 divListProjects.style.display = 'none';
@@ -19,6 +32,15 @@ const tirarSelecao = () => {
     tdSelecionados.forEach(el => el.classList.remove('active'))
 }
 
+const openModal = (idmodal) => {
+    idmodal.style.display = "block";
+    divOverlaymod.style.display = "block";
+}
+
+const closeModal = (idmodal) => {
+    idmodal.style.display = "none";
+    divOverlaymod.style.display = "none";
+}
 
 const createGrid = (list) => {
         
@@ -75,10 +97,6 @@ const listGrids = (lists) => {
 
     const results = lists.slice().reverse()
 
-    // lists.slice().reverse().map((list, index) => {     
-    //     //createGrid(list)
-    // });
-
     ArrayProjects = results;
     carregarMais();
 
@@ -100,7 +118,7 @@ const carregarMais = () => {
 }
 
 
-const viewFiltred = (lists, filtro) => {
+const viewFiltred = (lists, filtro, typefilter) => {
 
     projetosGridDiv.innerHTML = '';
 
@@ -110,14 +128,20 @@ const viewFiltred = (lists, filtro) => {
     ArrayProjects = [];
     itensExibidos = 0;
 
-    const findCategory = lists.filter(list => list.category === filtro);
+    const findCategory = lists.filter(list => list.category === filtro || list.name.toLowerCase() === filtro);
     
-    pInfoCategories.textContent = (findCategory.length > 0 ) ? `Essa categoria possui ${findCategory.length} projeto.`: `Essa categoria possui ${findCategory.length} projetos.`;
+    if(typefilter === 'search_results') {
+        pInfoCategories.textContent = (findCategory.length > 0 ) ? `${findCategory.length} resultados encontrados para ${filtro}.`: `${findCategory.length} resultado encontrado.`;
+    }else{
+        pInfoCategories.textContent = (findCategory.length > 0 ) ? `Essa categoria possui ${findCategory.length} projeto.`: `Essa categoria possui ${findCategory.length} projetos.`;
+    }
 
     ArrayProjects = findCategory;
     carregarMais();
 
 }
+
+
 
 
 
@@ -177,7 +201,7 @@ const generateMenu = (lists) => {
 
             h2titleListProjs.textContent = `${item}`;
 
-            viewFiltred(data, params.get('c'))
+            viewFiltred(data, params.get('c'),'')
 
         })
 
@@ -189,7 +213,37 @@ const generateMenu = (lists) => {
 
 }
 
+const buscaProjetos = (termos) => {
+
+    if(!termos || termos.trim().length < 3) {
+        btnLoadMore.style.display = 'none';
+        return;
+    }
+
+    viewFiltred(data, termos, 'search_results');
+
+}
+
+divfooter.innerHTML = `<p>&copy; ${datenow.getFullYear()} hoobr - Feito por <a href="https://github.com/higorfernandoeliseo">Igor Eliseo</a></p>`
+
+if(window.innerWidth <= 768) {
+    document.querySelector('#sidebar').classList.add('collapsed');
+}
+
 generateMenu(data)
 listGrids(data)
 btnLoadMore.addEventListener('click', carregarMais);
-//console.log(viewFiltred(data, 'Sistema Operacional'))
+
+btnAddProject.onclick = () => {
+    openModal(modalAddProject)
+}
+
+BtncloseModal.onclick = () => {
+    closeModal(modalAddProject)
+}
+
+inputsearchEngine.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter') {       
+        buscaProjetos(inputsearchEngine.value);
+    }
+})

@@ -59,8 +59,41 @@
                 <button id="loadMore">Carregar mais</button>
             </main>
         </div>
-    </div>
 
+        <div id="modalAddProjeto">
+            <div id="title-header">
+                <h2>Adicionar meu projeto</h2>
+                <button id="closemodalAddProject">
+                    <i class="lni lnis-xmark"></i>
+                </button>
+            </div>
+            <div id="body-modal">
+                <span class="message">
+                    
+                    <p>Feito por devs, para devs. se você é brasileiro e quer divulgar seu projeto aqui contribua adicionando seu projeto.</p>
+
+                    <p><strong>Você pode fazer o fork pelo GitHub ou pelo Git clone na linha de comando usando Prompt de comando ou Powershell.</strong></p>
+                    
+                    <p>O fluxo padrão para qualquer desenvolvedor que queira listar um projeto será:</p>
+
+                    <p>1. O colaborador faz um fork do repositório hoobr.</p>
+                    <p>2. Faça um clone do repositório 'git clone https://github.com/higorfernandoeliseo/hoobr.git'</p>
+                    <p>3. Abra no seu editor favorito o arquivo 'projects.json' no diretório 'assets/db'.</p>
+                    <p>4. Adicione seu projeto criando um novo objeto ao array dentro do arquivo "projects.json"</p>
+                    <p>5. Adicione os arquivos com 'git add .' e comite as alterações com 'git commit -m "Descreva o que alterou em poucas palavras" '.</p>
+                    <p>6. Dê um 'git push origin master'</p>
+                    <p>7. Acesse o repositório no GitHub. Clique no botão "Compare & pull request" que aparecerá.</p>
+                    <p>8. preencha o título e a descrição sobre o projeto a ser adicionado, e clique em "Create pull request".</p>
+                </span>
+                <p class="aviso">Aguarde a adição ser aprovada o projeto será adicionado na plataforma.</p>
+            </div>
+        </div>
+
+        <div id="overlay"></div>
+
+        
+    </div>
+    <footer id="footer"></footer>
     <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
