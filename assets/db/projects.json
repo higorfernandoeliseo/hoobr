@@ -10,7 +10,7 @@
     },
     {
         "name": "mobile-to-desktop-kit",
-        "description": "Leitor leve de Feeds RSS feito somente com HTML, CSS e JavaScript com persistência localmente sem a dependência de algoritmos.",
+        "description": "Um projeto open‑source para transformar qualquer celular em um computador funcional, priorizando compatibilidade, baixo custo e espelhamento wireless.",
         "desenvolvedor": "robsonamendonca",
         "url": "https://github.com/robsonamendonca/mobile-to-desktop-kit",
         "languages": ["HTML", "CSS", "JavaScript"],
