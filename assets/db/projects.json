@@ -7,5 +7,14 @@
         "languages": ["HTML", "CSS", "JavaScript"],
         "category": "Leitor RSS",
         "status": 0
+    },
+    {
+        "name": "mobile-to-desktop-kit",
+        "description": "Leitor leve de Feeds RSS feito somente com HTML, CSS e JavaScript com persistência localmente sem a dependência de algoritmos.",
+        "desenvolvedor": "robsonamendonca",
+        "url": "https://github.com/robsonamendonca/mobile-to-desktop-kit",
+        "languages": ["HTML", "CSS", "JavaScript"],
+        "category": "OpenSource",
+        "status": 0
     }
 ]
