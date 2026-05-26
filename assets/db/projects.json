@@ -16,5 +16,14 @@
         "languages": ["HTML", "CSS", "JavaScript"],
         "category": "OpenSource",
         "status": 0
+    },
+    {
+        "name": "ai-sokoban",
+        "description": "Um resolvedor de quebra cabeças SOKOBAN usando inteligência artificial. Usa uma implementação do algoritmo A-Estrela.",
+        "desenvolvedor": "llvasconcellos2",
+        "url": "https://github.com/llvasconcellos2/ai-sokoban",
+        "languages": ["python"],
+        "category": "OpenSource",
+        "status": 0
     }
 ]
