@@ -25,5 +25,14 @@
         "languages": ["python"],
         "category": "OpenSource",
         "status": 0
+    },
+    {
+        "name": "Circuito Util",
+        "description": "Piloto brasileiro que conecta gargalos concretos de projetos a pessoas que querem aplicar capacidades úteis em casos reais, com limites, privacidade e resultados registrados.",
+        "desenvolvedor": "santanacontatto-cyber",
+        "url": "https://github.com/santanacontatto-cyber/circuito-util",
+        "languages": ["HTML"],
+        "category": "OpenSource",
+        "status": 0
     }
 ]
