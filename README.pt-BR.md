@@ -17,7 +17,7 @@ Ele possui um sistema de busca bem simples para pesquisar tanto nome do projeto 
 
 - Exibição dos projetos Adicionados recentemente na home.
 - Busca para nome de projetos e descrição.
-- Exibição das Llinguagens usadas no projeto.
+- Exibição das Linguagens usadas no projeto.
 - Categorias na lateral dos projetos.
 - Exibição se o projeto esta abandonado ou não.
 
